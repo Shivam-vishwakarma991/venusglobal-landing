@@ -51,13 +51,13 @@ export default function Footer() {
                 <span className="text-gold font-bold text-sm">VG</span>
               </div>
               <div>
-                <div className="font-bold text-lg text-white" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+                <div className="font-bold text-xl text-white" style={{ fontFamily: "'DM Sans', sans-serif" }}>
                   VenusGlobal
                 </div>
-                <div className="text-xs text-gold/70">Trading Ltd. · Hong Kong</div>
+                <div className="text-sm text-gold/70">Trading Ltd. · Hong Kong</div>
               </div>
             </div>
-            <p className="text-white/50 text-sm leading-relaxed mb-6">
+            <p className="text-white/50 text-base leading-relaxed mb-6">
               Your trusted distributor for consumer electronics across Asia,
               Middle East &amp; Americas. Direct brand relationships. Best pricing.
             </p>
@@ -82,16 +82,16 @@ export default function Footer() {
 
           {/* Quick links */}
           <div>
-            <h4 className="text-white font-semibold text-sm mb-5 tracking-wide uppercase" style={{ letterSpacing: "0.1em" }}>
+            <h4 className="text-white font-semibold text-base mb-5 tracking-wide uppercase" style={{ letterSpacing: "0.1em" }}>
               Quick Links
             </h4>
-            <ul className="space-y-2.5">
+            <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
                     onClick={(e) => { e.preventDefault(); scrollTo(link.href); }}
-                    className="text-white/50 hover:text-gold text-sm transition-colors flex items-center gap-2 group"
+                    className="text-white/50 hover:text-gold text-base transition-colors flex items-center gap-2 group"
                   >
                     <span className="w-1 h-1 rounded-full bg-gold/40 group-hover:bg-gold transition-colors" />
                     {link.label}
@@ -103,25 +103,25 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-white font-semibold text-sm mb-5 tracking-wide uppercase" style={{ letterSpacing: "0.1em" }}>
+            <h4 className="text-white font-semibold text-base mb-5 tracking-wide uppercase" style={{ letterSpacing: "0.1em" }}>
               Contact
             </h4>
             <div className="space-y-3">
               <a
                 href="mailto:info@venusglobal.com.hk"
-                className="flex items-center gap-2.5 text-white/50 hover:text-gold text-sm transition-colors group"
+                className="flex items-center gap-2.5 text-white/50 hover:text-gold text-base transition-colors group"
               >
-                <Mail className="w-4 h-4 text-gold/60 group-hover:text-gold flex-shrink-0" />
+                <Mail className="w-5 h-5 text-gold/60 group-hover:text-gold flex-shrink-0" />
                 info@venusglobal.com.hk
               </a>
               <a
                 href="mailto:sales@venusglobal.com.hk"
-                className="flex items-center gap-2.5 text-white/50 hover:text-gold text-sm transition-colors group"
+                className="flex items-center gap-2.5 text-white/50 hover:text-gold text-base transition-colors group"
               >
-                <Mail className="w-4 h-4 text-gold/60 group-hover:text-gold flex-shrink-0" />
+                <Mail className="w-5 h-5 text-gold/60 group-hover:text-gold flex-shrink-0" />
                 sales@venusglobal.com.hk
               </a>
-              <div className="text-white/35 text-xs mt-4 pt-4 border-t border-white/5">
+              <div className="text-white/35 text-sm mt-4 pt-4 border-t border-white/5">
                 Mon–Fri · 9am–6pm HKT
               </div>
             </div>
@@ -134,10 +134,10 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-        <p className="text-white/30 text-xs">
+        <p className="text-white/40 text-sm">
           © 2025 VenusGlobal Trading Ltd. All Rights Reserved.
         </p>
-        <p className="text-white/20 text-xs">
+        <p className="text-white/30 text-sm">
           venusglobal.com.hk · info@venusglobal.com.hk
         </p>
       </div>
