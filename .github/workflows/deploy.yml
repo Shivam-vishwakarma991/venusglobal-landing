@@ -8,13 +8,11 @@ on:
     branches:
       - main
 
-# Required for GitHub Pages deployment
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Only one deployment at a time; cancel in-progress on new push
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -47,7 +45,7 @@ jobs:
         run: npx tsc --noEmit
 
   # ─────────────────────────────────────────────────────────────────────────────
-  # 2. Build (static export → out/)
+  # 2. Build → static export into out/
   # ─────────────────────────────────────────────────────────────────────────────
   build:
     name: Build
@@ -67,9 +65,19 @@ jobs:
       - name: Build static export
         run: npm run build
         env:
+          # GITHUB_REPOSITORY is set automatically by GitHub Actions ("owner/repo").
+          # next.config.ts reads it to set the correct basePath.
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          # Set to "true" if you have a custom domain configured in GitHub Pages settings.
+          # This disables basePath so assets load from root.
+          CUSTOM_DOMAIN: ${{ vars.CUSTOM_DOMAIN || 'false' }}
           NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL || 'https://venusglobal.com.hk' }}
 
-      # next build with output: "export" writes to ./out
+      # ── Critical: without .nojekyll, GitHub Pages strips any folder that
+      # starts with "_", which includes _next/static/ (your CSS and JS).
+      - name: Add .nojekyll to disable Jekyll processing
+        run: touch ./out/.nojekyll
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
