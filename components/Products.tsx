@@ -8,6 +8,7 @@ import {
   Cpu,
   Package,
 } from "lucide-react";
+import { openWhatsApp } from "@/lib/whatsapp";
 
 const categories = [
   {
@@ -49,10 +50,6 @@ const categories = [
 ];
 
 export default function Products() {
-  const scrollToContact = () => {
-    const el = document.querySelector("#contact");
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <section id="products" className="py-20 md:py-28 bg-gray-50 relative overflow-hidden">
@@ -110,7 +107,7 @@ export default function Products() {
           <p className="text-slate-500 mb-5">
             Don&apos;t see what you&apos;re looking for? We source across a wide range of consumer electronics.
           </p>
-          <button onClick={scrollToContact} className="btn-primary" style={{ fontSize: "0.95rem" }}>
+          <button onClick={() => openWhatsApp()} className="btn-primary" style={{ fontSize: "0.95rem" }}>
             Send Us a Specific Enquiry
           </button>
         </div>

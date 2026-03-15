@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from "react";
 import { Mail, Clock, Send, CheckCircle } from "lucide-react";
+import { openWhatsApp, buildEnquiryMessage } from "@/lib/whatsapp";
 
 const productCategories = [
   "IT Products (Laptops, Tablets, Desktops)",
@@ -32,11 +33,10 @@ export default function ContactForm() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    // Simulate submission — replace with actual API call / Formspree / EmailJS
-    await new Promise((r) => setTimeout(r, 1500));
+    openWhatsApp(buildEnquiryMessage(form));
     setLoading(false);
     setSubmitted(true);
   };
@@ -281,9 +281,11 @@ export default function ContactForm() {
                 Office Location
               </h3>
               <p className="text-slate-400 text-sm italic">
-                Hong Kong, SAR China
-                <br />
-                <span className="text-xs">(Full address TBC from client)</span>
+               UNIT 1603, 16/F THE L. PLAZA
+367-375 QUEEN&apos;S RD CENTRAL
+SHEUNG WAN
+HONG KONG
+       
               </p>
             </div>
           </div>

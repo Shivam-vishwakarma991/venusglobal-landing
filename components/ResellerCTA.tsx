@@ -1,14 +1,12 @@
 "use client";
 
 import { ChevronRight, Laptop, Headphones, Gamepad2, Watch, Speaker, SmartphoneNfc } from "lucide-react";
+import { openWhatsApp } from "@/lib/whatsapp";
 
 const categories = ["Laptops", "Tablets", "Gaming", "Wearables", "Speakers", "Smart Home"];
 const categoryIcons = [Laptop, SmartphoneNfc, Gamepad2, Watch, Speaker, Headphones];
 
 export default function ResellerCTA() {
-  const scrollToContact = () => {
-    document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <section className="relative py-20 md:py-24 overflow-hidden bg-navy">
@@ -60,7 +58,7 @@ export default function ResellerCTA() {
             </div>
 
             <button
-              onClick={scrollToContact}
+              onClick={() => openWhatsApp()}
               className="inline-flex items-center gap-2 bg-gold text-white font-semibold text-base px-8 py-4 rounded-xl hover:bg-amber-700 transition-all duration-200 shadow-xl hover:shadow-2xl hover:-translate-y-0.5"
             >
               Reach Us Now

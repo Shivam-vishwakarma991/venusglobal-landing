@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { ChevronRight, ArrowDown } from "lucide-react";
+import { openWhatsApp } from "@/lib/whatsapp";
 
 // Animated floating particles for the hero
 function CircuitLines() {
@@ -101,7 +102,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 mb-16">
             <a
               href="#contact"
-              onClick={(e) => { e.preventDefault(); scrollTo("#contact"); }}
+              onClick={(e) => { e.preventDefault(); openWhatsApp(); }}
               className="btn-primary text-base"
             >
               Get a Quote

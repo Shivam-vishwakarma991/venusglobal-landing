@@ -1,5 +1,7 @@
 "use client";
 
+import { openWhatsApp } from "@/lib/whatsapp";
+
 // Each brand gets a fixed vibrant color — deliberately varied, no AI palette
 const brandColors: Record<string, { bg: string; text: string; border: string }> = {
   Apple:       { bg: "#1a1a1a",   text: "#ffffff", border: "#444" },
@@ -139,12 +141,8 @@ export default function Brands() {
               Our network extends beyond the brands listed. Get in touch to discuss your requirements.
             </p>
           </div>
-          <a
-            href="#contact"
-            onClick={(e) => {
-              e.preventDefault();
-              document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
-            }}
+          <button
+            onClick={() => openWhatsApp()}
             className="flex-shrink-0 flex items-center gap-2 font-semibold px-6 py-3 rounded-xl transition-colors shadow-lg"
             style={{ background: "#C8952C", color: "white" }}
             onMouseEnter={(e) => (e.currentTarget.style.background = "#A67820")}
@@ -154,7 +152,7 @@ export default function Brands() {
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </a>
+          </button>
         </div>
       </div>
     </section>
