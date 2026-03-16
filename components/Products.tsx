@@ -8,7 +8,7 @@ import {
   Cpu,
   Package,
 } from "lucide-react";
-import { openWhatsApp } from "@/lib/whatsapp";
+import { openContact } from "@/lib/contact";
 
 const categories = [
   {
@@ -107,7 +107,7 @@ export default function Products() {
           <p className="text-slate-500 mb-5">
             Don&apos;t see what you&apos;re looking for? We source across a wide range of consumer electronics.
           </p>
-          <button onClick={() => openWhatsApp()} className="btn-primary" style={{ fontSize: "0.95rem" }}>
+          <button onClick={() => openContact()} className="btn-primary" style={{ fontSize: "0.95rem" }}>
             Send Us a Specific Enquiry
           </button>
         </div>

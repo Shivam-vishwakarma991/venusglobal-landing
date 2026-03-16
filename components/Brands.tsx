@@ -1,6 +1,6 @@
 "use client";
 
-import { openWhatsApp } from "@/lib/whatsapp";
+import { openContact } from "@/lib/contact";
 
 // Each brand gets a fixed vibrant color — deliberately varied, no AI palette
 const brandColors: Record<string, { bg: string; text: string; border: string }> = {
@@ -142,7 +142,7 @@ export default function Brands() {
             </p>
           </div>
           <button
-            onClick={() => openWhatsApp()}
+            onClick={() => openContact()}
             className="flex-shrink-0 flex items-center gap-2 font-semibold px-6 py-3 rounded-xl transition-colors shadow-lg"
             style={{ background: "#C8952C", color: "white" }}
             onMouseEnter={(e) => (e.currentTarget.style.background = "#A67820")}

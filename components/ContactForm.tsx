@@ -2,7 +2,7 @@
 
 import { useState, FormEvent } from "react";
 import { Mail, Clock, Send, CheckCircle } from "lucide-react";
-import { openWhatsApp, buildEnquiryMessage } from "@/lib/whatsapp";
+import { openContact, buildEnquiryEmail } from "@/lib/contact";
 
 const productCategories = [
   "IT Products (Laptops, Tablets, Desktops)",
@@ -36,7 +36,8 @@ export default function ContactForm() {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    openWhatsApp(buildEnquiryMessage(form));
+    const { subject, body } = buildEnquiryEmail(form);
+    openContact(subject, body);
     setLoading(false);
     setSubmitted(true);
   };

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronRight } from "lucide-react";
-import { openWhatsApp } from "@/lib/whatsapp";
+import { openContact } from "@/lib/contact";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -88,7 +88,7 @@ export default function Navbar() {
           {/* CTA */}
           <div className="hidden md:flex items-center">
             <button
-              onClick={() => openWhatsApp()}
+              onClick={() => openContact()}
               className="flex items-center gap-1.5 text-sm font-semibold px-5 py-2.5 rounded-lg transition-all duration-200 hover:-translate-y-0.5"
               style={{
                 background: "#C8952C",
@@ -141,7 +141,7 @@ export default function Navbar() {
             </a>
           ))}
           <button
-            onClick={() => { setMenuOpen(false); openWhatsApp(); }}
+            onClick={() => { setMenuOpen(false); openContact(); }}
             className="mt-2 flex items-center justify-center gap-1.5 font-semibold py-3 px-5 rounded-lg transition-colors"
             style={{ background: "#C8952C", color: "white" }}
           >
