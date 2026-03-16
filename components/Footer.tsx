@@ -1,6 +1,7 @@
 "use client";
 
 import { Mail } from "lucide-react";
+import Image from "next/image";
 
 const quickLinks = [
   { label: "About", href: "#about" },
@@ -40,22 +41,21 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-navy-dark bg-[#071428] text-white">
+    <footer className="bg-navy-dark text-white">
       {/* Main footer */}
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-14">
         <div className="grid md:grid-cols-3 gap-10">
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-9 h-9 rounded-lg bg-gold/20 border border-gold/30 flex items-center justify-center">
-                <span className="text-gold font-bold text-sm">VG</span>
-              </div>
-              <div>
-                <div className="font-bold text-xl text-white" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-                  Venus Global
-                </div>
-                <div className="text-sm text-gold/70">Trading Ltd. · Hong Kong</div>
-              </div>
+              <Image
+                src="/VenusGlobal_Logo_White_Transparent.png"
+                alt="Venus Global"
+                width={160}
+                height={40}
+                className="h-20 w-auto object-contain"
+              />
+
             </div>
             <p className="text-white/50 text-base leading-relaxed mb-6">
               Your trusted distributor for consumer electronics across Asia,

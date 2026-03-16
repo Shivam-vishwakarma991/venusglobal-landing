@@ -33,29 +33,29 @@ export default function Navbar() {
     <header
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={{
-        background: scrolled ? "white" : "transparent",
-        boxShadow: scrolled ? "0 4px 20px rgba(11,31,58,0.08)" : "none",
-        borderBottom: scrolled ? "1px solid #f0f0f0" : "none",
+        background: scrolled ? "rgba(7, 20, 40, 0.72)" : "transparent",
+        backdropFilter: scrolled ? "blur(10px)" : "none",
+        WebkitBackdropFilter: scrolled ? "blur(10px)" : "none",
+        boxShadow: scrolled ? "0 10px 30px rgba(0,0,0,0.22)" : "none",
+        borderBottom: "none",
       }}
     >
       <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-auto">
           {/* Logo */}
           <a
             href="#home"
             onClick={(e) => { e.preventDefault(); scrollTo("#home"); }}
             className="flex items-center gap-2.5 group"
           >
-            <div
-              className="w-9 h-9 rounded-lg flex items-center justify-center shadow-md"
-              style={{ background: "#0B1F3A" }}
-            >
-              <span style={{ color: "#C8952C", fontWeight: 700, fontSize: "0.8rem" }}>VG</span>
-            </div>
-     <img
-     src="./VenusGlobal_Logo_White_Transparent.png"
-     alt="ds"
-     />
+            <Image
+              src="/VenusGlobal_Logo_White_Transparent.png"
+              alt="Venus Global"
+              width={160}
+              height={40}
+              className="md:h-20 h-16 w-auto object-contain"
+              priority
+            />
           </a>
 
           {/* Desktop nav */}
@@ -66,7 +66,7 @@ export default function Navbar() {
                 href={link.href}
                 onClick={(e) => { e.preventDefault(); scrollTo(link.href); }}
                 className="text-sm font-medium transition-colors hover:text-yellow-600"
-                style={{ color: scrolled ? "#4a5568" : "rgba(255,255,255,0.85)" }}
+                style={{ color: "rgba(255,255,255,0.85)" }}
               >
                 {link.label}
               </a>
@@ -94,11 +94,11 @@ export default function Navbar() {
           {/* Mobile hamburger */}
           <button
             className="md:hidden p-2 rounded-lg transition-colors"
-            style={{ color: scrolled ? "#0B1F3A" : "white" }}
+            style={{ color:"white" }}
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
-            {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
       </div>

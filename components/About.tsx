@@ -51,13 +51,11 @@ export default function About() {
               </p>
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-8 flex  gap-3">
               <span className="px-4 py-2 bg-navy/5 text-navy text-sm font-medium rounded-full border border-navy/10">
                 HK-Registered Business
               </span>
-              <span className="px-4 py-2 bg-gold/10 text-gold-dark text-sm font-medium rounded-full border border-gold/20">
-                DKINT Electronics Group
-              </span>
+              
               <span className="px-4 py-2 bg-navy/5 text-navy text-sm font-medium rounded-full border border-navy/10">
                 Est. 2005 · Dubai + HK
               </span>
