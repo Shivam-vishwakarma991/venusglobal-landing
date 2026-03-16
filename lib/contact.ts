@@ -6,9 +6,9 @@
 export const CONTACT_EMAIL = "info@venusglobal.com.hk";
 
 /** Default subject + body for all "Get a Quote" / "Reach Us Now" CTA buttons */
-const DEFAULT_SUBJECT = "Quote Request – VenusGlobal";
+const DEFAULT_SUBJECT = "Quote Request – Venus Global";
 const DEFAULT_BODY =
-  "Hi VenusGlobal Team,\n\nI came across your website and I'm interested in getting a quote for consumer electronics.\n\nCould you please assist me?\n\nBest regards,";
+  "Hi Venus Global Team,\n\nI came across your website and I'm interested in getting a quote for consumer electronics.\n\nCould you please assist me?\n\nBest regards,";
 
 /** Opens the user's default mail client with a pre-filled email draft */
 export function openContact(
@@ -28,10 +28,10 @@ export function buildEnquiryEmail(form: {
   category: string;
   message: string;
 }): { subject: string; body: string } {
-  const subject = `Enquiry from ${form.company || form.name} – VenusGlobal`;
+  const subject = `Enquiry from ${form.company || form.name} – Venus Global`;
 
   const lines: string[] = [
-    "Hi VenusGlobal Team,",
+    "Hi Venus Global Team,",
     "",
     "I'd like to submit a product enquiry. Please find my details below:",
     "",

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronRight } from "lucide-react";
 import { openContact } from "@/lib/contact";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -51,23 +52,10 @@ export default function Navbar() {
             >
               <span style={{ color: "#C8952C", fontWeight: 700, fontSize: "0.8rem" }}>VG</span>
             </div>
-            <div className="flex flex-col leading-none">
-              <span
-                className="font-bold text-lg tracking-tight transition-colors"
-                style={{
-                  fontFamily: "'DM Sans', sans-serif",
-                  color: scrolled ? "#0B1F3A" : "white",
-                }}
-              >
-                VenusGlobal
-              </span>
-              <span
-                className="text-xs"
-                style={{ color: "#C8952C" }}
-              >
-                Trading Ltd.
-              </span>
-            </div>
+     <img
+     src="./VenusGlobal_Logo_White_Transparent.png"
+     alt="ds"
+     />
           </a>
 
           {/* Desktop nav */}

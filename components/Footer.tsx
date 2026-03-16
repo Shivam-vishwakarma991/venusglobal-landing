@@ -52,7 +52,7 @@ export default function Footer() {
               </div>
               <div>
                 <div className="font-bold text-xl text-white" style={{ fontFamily: "'DM Sans', sans-serif" }}>
-                  VenusGlobal
+                  Venus Global
                 </div>
                 <div className="text-sm text-gold/70">Trading Ltd. · Hong Kong</div>
               </div>
@@ -135,7 +135,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
         <p className="text-white/40 text-sm">
-          © 2025 VenusGlobal Trading Ltd. All Rights Reserved.
+          © 2025 Venus Global Trading Ltd. All Rights Reserved.
         </p>
         <p className="text-white/30 text-sm">
           venusglobal.com.hk · info@venusglobal.com.hk

@@ -33,14 +33,12 @@ export default function About() {
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy mb-6 animated-underline"
               style={{ fontFamily: "'DM Sans', sans-serif" }}
             >
-              Why Partner with<br />VenusGlobal?
+              Why Partner with<br />Venus Global?
             </h2>
             <div className="space-y-5 text-slate-600 text-base md:text-lg leading-relaxed mt-8">
               <p>
-                VenusGlobal meets the diverse needs of our customers in the consumer electronics
-                industry with our global business connections. As the Asia-Pacific entity of
-                DKINT Electronics, we bring a truly international sourcing network to your doorstep.
-              </p>
+  Venus Global meets the diverse needs of customers in the consumer electronics industry through strong global business connections. With an extensive Asia-Pacific presence, we bring a truly international sourcing network directly to our partners.
+</p>
               <p>
                 Our experience in sales and marketing spans over <strong className="text-navy">15 years</strong>,
                 covering Asia, the Middle East, and the Americas. We deliver exceptional service

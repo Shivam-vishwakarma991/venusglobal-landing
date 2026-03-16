@@ -93,10 +93,10 @@ export default function Hero() {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-white/70 max-w-2xl mb-10 leading-relaxed">
-            Connecting global brands with resellers across Asia, Middle East &amp; Americas
-            &mdash; since 2005. Distributor pricing. Fast response. 50+ countries served.
-          </p>
+         <p className="text-lg md:text-xl text-white/70 max-w-2xl mb-10 leading-relaxed">
+  Connecting global brands with resellers across Asia, Middle East &amp; Americas
+  &mdash; backed by years of industry experience, distributor pricing, fast response, and service across 50+ countries.
+</p>
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 mb-16">

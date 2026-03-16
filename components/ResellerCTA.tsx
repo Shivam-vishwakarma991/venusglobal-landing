@@ -38,7 +38,7 @@ export default function ResellerCTA() {
             <p className="text-white/65 text-base md:text-lg leading-relaxed mb-8">
               Move consumer electronics at the lowest distributor prices.
               Join hundreds of resellers across Asia, Middle East, and Americas
-              who trust VenusGlobal for their sourcing needs.
+              who trust Venus Global for their sourcing needs.
             </p>
 
             {/* Category chips */}
