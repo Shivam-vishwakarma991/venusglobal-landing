@@ -73,12 +73,12 @@ export default function Hero() {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8 pt-24 pb-20">
         <div className="max-w-3xl">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-white/5 border border-gold/20 rounded-full px-4 py-1.5 mb-8 backdrop-blur-sm">
+          {/* <div className="inline-flex items-center gap-2 bg-white/5 border border-gold/20 rounded-full px-4 py-1.5 mb-8 backdrop-blur-sm">
             <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
             <span className="text-gold text-sm font-medium tracking-wide">
               Established 2005 · Hong Kong
             </span>
-          </div>
+          </div> */}
 
           {/* Headline */}
           <h1
@@ -137,10 +137,10 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40">
+      {/* <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40">
         <span className="text-xs tracking-widest uppercase">Scroll</span>
         <ArrowDown className="w-4 h-4 animate-bounce" />
-      </div>
+      </div> */}
 
       {/* Bottom fade */}
       <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white/5 to-transparent pointer-events-none" />

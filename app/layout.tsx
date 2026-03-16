@@ -28,8 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon_32x32.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon_128x128.png" />
       </head>
       <body className="antialiased">{children}</body>
     </html>
